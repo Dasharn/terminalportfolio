@@ -24,10 +24,6 @@ const COMMANDS = [
     description: "Visit my blog",
   },
   {
-    command: "youtube",
-    description: "Visit my youtube channel (@livecode247)",
-  },
-  {
     command:
       // 'clear <span style="color: var(--primary)">(Ctrl+L shortcut)</span>',
       "clear",
@@ -74,39 +70,46 @@ export const CONTENTS = {
     ).join("") +
     `<br />
       <div class="command">Type one of the above to view. For eg. <span style="color: var(--secondary)">about</span></div>`,
-  about: () => `My name is Kavin. I am ${getAge(
-    "December 25, 2005"
-  )} and I\'m a fullstack web developer
+  about: () => `My name is Dasharn. I am ${getAge(
+        "Marhc 01, 2003"
+      )} and I\'m an aspiring software engineer.
     <br/><br/>
-    I love coding in Javascript, Typescript and Python, and have worked with frameworks like ReactJS, VueJS, Express, and Django. I currently use NextJS, Laravel, and NodeJS in a lot of my projects.
+    I code in Python, Java, JavaScript, CSS and HTML and have worked with frameworks like Django, Flask, React.
     <br /><br />
-    I am a former President of <a href="https://exunclan.com" target="_blank">Exun Clan</a> ('22-23). I am an incoming freshman at <a href="https://uwaterloo.ca/content/home" target="_blank">University of Waterloo</a>.
+    I am a second year student at <a href="https://www.manchester.ac.uk/" target="_blank">University of Manchester</a>.
     <br />
-    I am also the Chapter Officer at the <a href="https://new-delhi-space-society.github.io" target="_blank">New Delhi Space Society</a>, a chapter of the <a href="https://space.nss.org" target="_blank">National Space Society</a>. I am a core maintainer of <a href="https://typewind.vercel.app" target="_new">Typewind</a>
+    </a>
   `,
   education:
-    () => `I am a high school graduate from <a href="https://dpsrkp.net" target="_blank">Delhi Public School, R.K. Puram</a> and an incoming freshman at <a href="https://uwaterloo.ca/content/home" target="_blank">University of Waterloo</a>.`,
+    () => `I went to the same secondary school and sixth form at <a href="http://www.qpcs.brent.sch.uk/" target="_blank">Queens Park Community School.</a>
+          I achieved 9 A* and 2As at GCSE and at A level I achieved A*A*A for Maths, Further Maths and Physics. </a>`,
   skills: () => `
-  I am experienced with Javascript, Typescript and Python and the web technologies dominating at the time:<br />
-  <div class="skill"><b>core</b>: HTML, CSS, Node.js and PHP<br /></div>
-  <div class="skill"><b>frameworks</b>: React, NextJS, Django, Express and Laravel<br /></div>
-  <div class="skill"><b>database</b>: MongoDB, PostgreSQL, MySQL, and SQLite<br /></div>
-  I also have knowledge of basic shell scripting and my dotfiles can be found <a href="https://github.com/kavinvalli/.dotfiles" target="_blank">here</a>.
+  I am experienced with Python, Java, JavaScript and the web technologies dominating at the time:<br />
+  <div class="skill"><b>core</b>: HTML, CSS.<br /></div>
+  <div class="skill"><b>frameworks</b>:Django, Flask, React.<br /></div>
+  <div class="skill"><b>database</b>: MySQL.<br /></div>
+  </a>
 <br /><br />
-  I also have experience with Mobile Development with Flutter.
   `,
   projects: getProjects,
   contact: getContacts,
   error: (input) =>
     `<div class="help-command">sh: Unknown command: ${input}</div><div class="help-command">See \`help\` for info`,
   blog: () => {
-    window.open("https://livecode247.com", "_blank");
+    window.open("https://www.dasharndennis.com/", "_blank");
     return "";
   },
-  youtube: () => {
+  /*youtube: () => {
     window.open("https://youtube.com/@livecode247", "_blank");
     return "";
-  },
+  },*/
+  awards: () => {
+    `
+    • Received Merit in International Pink Kangaroo Math Challenge - ranking top 0.5% of 200,000 entrants.
+    • Received 3 x Gold Award in British Senior and Intermediate Math Challenge - ranking top 3% of 300,000 entrants.
+    • Received Annual Mathematics Award for top performing maths student - ranking top 3 in a cohort of 80 students.
+    `
+  }
 };
 
 function getAge(dateString) {
@@ -119,3 +122,4 @@ function getAge(dateString) {
 
   return age;
 }
+
